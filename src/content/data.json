@@ -1,0 +1,65 @@
+{
+  "site": {
+    "title": "Haomiao Jiang | Computer Vision Engineer",
+    "description": "The personal portfolio of Haomiao Jiang, working across computer vision, 3D systems, and generative AI.",
+    "language": "en",
+    "skipLabel": "Skip to content",
+    "navigationLabel": "Primary navigation",
+    "footerLabel": "Site footer",
+    "copyright": "Haomiao Jiang",
+    "builtWith": "Static by design. Built with Astro.",
+    "navigation": [
+      { "label": "Research", "href": "#research" },
+      { "label": "About", "href": "#about" }
+    ]
+  },
+  "profile": {
+    "name": "Haomiao Jiang",
+    "handle": "hjiang36",
+    "role": "Computer Vision Engineer",
+    "location": "California, USA",
+    "affiliation": "Roblox",
+    "avatar": "https://avatars.githubusercontent.com/u/3926437?v=4",
+    "avatarAlt": "Portrait of Haomiao Jiang",
+    "availability": "Building at the intersection of pixels, geometry, and intelligent systems.",
+    "intro": "I work across computer vision, 3D systems, and generative AI, with roots in visual perception research and a bias toward useful tools.",
+    "links": [
+      { "label": "GitHub", "href": "https://github.com/hjiang36" },
+      { "label": "Google Scholar", "href": "https://scholar.google.com/citations?user=RB6RIxkAAAAJ&hl=en" },
+      { "label": "LinkedIn", "href": "https://www.linkedin.com/pub/haomiao-jiang/2b/ba3/34b" }
+    ]
+  },
+  "hero": {
+    "eyebrow": "CV / 3D / GEN-AI",
+    "prompt": "~/haomiao",
+    "command": "whoami",
+    "scrollHint": "Scroll to inspect research interests"
+  },
+  "research": {
+    "index": "01",
+    "eyebrow": "Current coordinates",
+    "title": "Research",
+    "description": "My public research profile is centered on how machines perceive, reconstruct, and generate visual worlds.",
+    "profileLabel": "Open Google Scholar profile",
+    "profileHref": "https://scholar.google.com/citations?user=RB6RIxkAAAAJ&hl=en",
+    "verifiedLabel": "Verified at stanford.edu",
+    "interests": [
+      { "number": "01", "name": "Computer Vision", "detail": "Perception, image understanding, and visual systems." },
+      { "number": "02", "name": "3D", "detail": "Geometry, reconstruction, and spatial interfaces." },
+      { "number": "03", "name": "Generative AI", "detail": "Models and tools for creating structured visual content." }
+    ]
+  },
+  "about": {
+    "index": "02",
+    "eyebrow": "Profile readout",
+    "title": "About",
+    "statement": "Engineer by practice, researcher by training, and a persistent builder of small tools that make difficult ideas tangible.",
+    "details": [
+      { "label": "Based", "value": "California" },
+      { "label": "Working at", "value": "Roblox" },
+      { "label": "Academic link", "value": "Stanford" }
+    ],
+    "contactPrompt": "Find me elsewhere",
+    "sourceNote": "Profile details are sourced from public GitHub and Google Scholar profiles."
+  }
+}

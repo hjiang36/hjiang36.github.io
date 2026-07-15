@@ -1,0 +1,49 @@
+---
+interface Detail { label: string; value: string }
+interface Link { label: string; href: string }
+interface Props {
+  about: {
+    index: string;
+    eyebrow: string;
+    title: string;
+    statement: string;
+    details: Detail[];
+    contactPrompt: string;
+    sourceNote: string;
+  };
+  links: Link[];
+}
+const { about, links } = Astro.props;
+---
+
+<section class="border-b border-ink/20" id="about">
+  <div class="mx-auto grid max-w-7xl gap-12 px-5 py-20 sm:px-8 sm:py-28 md:grid-cols-12 lg:px-12">
+    <div class="md:col-span-3">
+      <p class="font-mono text-xs text-signal">[{about.index}]</p>
+      <p class="mt-2 font-mono text-xs uppercase text-muted">{about.eyebrow}</p>
+    </div>
+    <div class="md:col-span-9">
+      <h2 class="text-5xl font-semibold sm:text-7xl">{about.title}</h2>
+      <p class="mt-8 max-w-4xl text-2xl leading-snug sm:text-4xl">{about.statement}</p>
+      <dl class="mt-14 grid border-y border-ink/20 sm:grid-cols-3">
+        {about.details.map((detail) => (
+          <div class="border-b border-ink/20 py-5 last:border-b-0 sm:border-r sm:border-b-0 sm:px-5 sm:first:pl-0 sm:last:border-r-0">
+            <dt class="font-mono text-xs uppercase text-muted">{detail.label}</dt>
+            <dd class="mt-2 text-lg">{detail.value}</dd>
+          </div>
+        ))}
+      </dl>
+      <div class="mt-12 flex flex-col justify-between gap-8 sm:flex-row sm:items-end">
+        <div>
+          <p class="mb-4 font-mono text-xs uppercase text-muted">{about.contactPrompt}</p>
+          <ul class="flex flex-wrap gap-5">
+            {links.map((link) => (
+              <li><a class="border-b border-ink font-mono text-sm hover:border-signal hover:text-signal" href={link.href} target="_blank" rel="noreferrer">{link.label}</a></li>
+            ))}
+          </ul>
+        </div>
+        <p class="max-w-xs font-mono text-[0.7rem] leading-5 text-muted">{about.sourceNote}</p>
+      </div>
+    </div>
+  </div>
+</section>

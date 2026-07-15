@@ -1,0 +1,13 @@
+---
+interface Props { name: string; copyright: string; builtWith: string; footerLabel: string }
+const { name, copyright, builtWith, footerLabel } = Astro.props;
+const year = new Date().getFullYear();
+---
+
+<footer aria-label={footerLabel}>
+  <div class="mx-auto flex max-w-7xl flex-col gap-3 px-5 py-8 font-mono text-xs text-muted sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-12">
+    <p>{year} {copyright}</p>
+    <p>{builtWith}</p>
+    <a class="text-ink hover:text-signal" href="#top">{name}</a>
+  </div>
+</footer>

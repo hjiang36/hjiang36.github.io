@@ -1,0 +1,26 @@
+---
+interface Props {
+  name: string;
+  handle: string;
+  navigation: Array<{ label: string; href: string }>;
+  navigationLabel: string;
+}
+
+const { name, handle, navigation, navigationLabel } = Astro.props;
+---
+
+<header class="border-b border-ink/20">
+  <div class="mx-auto flex min-h-16 max-w-7xl items-center justify-between gap-6 px-5 sm:px-8 lg:px-12">
+    <a href="#top" class="group flex items-baseline gap-3 font-mono text-sm">
+      <span class="font-semibold">{name}</span>
+      <span class="hidden text-muted group-hover:text-signal sm:inline">@{handle}</span>
+    </a>
+    <nav aria-label={navigationLabel}>
+      <ul class="flex items-center gap-5 font-mono text-xs uppercase sm:gap-8">
+        {navigation.map((item) => (
+          <li><a class="decoration-signal underline-offset-4 hover:underline" href={item.href}>{item.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+</header>

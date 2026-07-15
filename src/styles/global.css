@@ -1,0 +1,32 @@
+@import '@fontsource-variable/spline-sans';
+@import '@fontsource/spline-sans-mono/400.css';
+@import '@fontsource/spline-sans-mono/600.css';
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Spline Sans Variable', sans-serif;
+  --font-mono: 'Spline Sans Mono', monospace;
+  --color-ink: #171714;
+  --color-paper: #f4f3ee;
+  --color-grid: #d9d7ce;
+  --color-signal: #e03b25;
+  --color-muted: #6e6c64;
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth bg-paper text-ink antialiased;
+  }
+
+  body {
+    @apply m-0 min-w-80 overflow-x-hidden;
+  }
+
+  ::selection {
+    @apply bg-signal text-white;
+  }
+
+  a:focus-visible {
+    @apply outline-2 outline-offset-4 outline-signal;
+  }
+}

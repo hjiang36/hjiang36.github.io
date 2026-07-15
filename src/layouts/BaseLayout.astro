@@ -1,0 +1,29 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  site: {
+    title: string;
+    description: string;
+    language: string;
+  };
+}
+
+const { site } = Astro.props;
+---
+
+<!doctype html>
+<html lang={site.language}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={site.description} />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#f4f3ee" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{site.title}</title>
+  </head>
+  <body class="font-sans">
+    <slot />
+  </body>
+</html>

@@ -1,0 +1,39 @@
+---
+import SectionHeading from './SectionHeading.astro';
+
+interface Interest { number: string; name: string; detail: string }
+interface Props {
+  research: {
+    index: string;
+    eyebrow: string;
+    title: string;
+    description: string;
+    profileLabel: string;
+    profileHref: string;
+    verifiedLabel: string;
+    interests: Interest[];
+  };
+}
+const { research } = Astro.props;
+---
+
+<section class="border-b border-ink/20 bg-ink text-paper" id="research">
+  <div class="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:px-12">
+    <SectionHeading index={research.index} eyebrow={research.eyebrow} title={research.title} description={research.description} />
+    <div class="mt-12 grid gap-12 lg:grid-cols-12">
+      <ol class="lg:col-span-8">
+        {research.interests.map((interest) => (
+          <li class="grid gap-3 border-b border-paper/20 py-7 sm:grid-cols-[4rem_1fr_1fr] sm:items-baseline">
+            <span class="font-mono text-xs text-signal">{interest.number}</span>
+            <h3 class="text-2xl font-semibold">{interest.name}</h3>
+            <p class="text-sm leading-relaxed text-paper/60">{interest.detail}</p>
+          </li>
+        ))}
+      </ol>
+      <aside class="border-l-2 border-signal pl-6 lg:col-span-3 lg:col-start-10">
+        <p class="font-mono text-xs uppercase text-paper/60">{research.verifiedLabel}</p>
+        <a class="mt-6 inline-block font-mono text-sm decoration-signal underline-offset-4 hover:text-signal hover:underline" href={research.profileHref} target="_blank" rel="noreferrer">{research.profileLabel}</a>
+      </aside>
+    </div>
+  </div>
+</section>
