@@ -9,4 +9,4 @@ npm install
 npm run dev
 ```
 
-All visible site content lives in `src/content/data.json`. The production build is published to the `gh-pages` branch by GitHub Actions when `main` is updated.
+All visible site content lives in `src/content/data.json`. GitHub Actions builds and deploys the production output through GitHub Pages when `main` is updated.
