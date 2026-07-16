@@ -1,0 +1,17 @@
+---
+import data from '../../content/data.json';
+import MemoIndex from '../../components/MemoIndex.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const pageTitle = `${data.memo.title} | ${data.profile.name}`;
+const memoSite = { ...data.site, title: pageTitle, description: data.memo.description };
+---
+
+<BaseLayout site={memoSite}>
+  <a class="fixed left-4 top-4 z-50 -translate-y-20 bg-ink px-4 py-2 font-mono text-xs text-paper focus:translate-y-0" href="#content">{data.site.skipLabel}</a>
+  <SiteHeader name={data.profile.name} handle={data.profile.handle} navigation={data.site.navigation} navigationLabel={data.site.navigationLabel} />
+  <MemoIndex memo={data.memo} />
+  <SiteFooter name={data.profile.name} copyright={data.site.copyright} builtWith={data.site.builtWith} footerLabel={data.site.footerLabel} />
+</BaseLayout>

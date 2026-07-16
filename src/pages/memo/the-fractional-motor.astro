@@ -1,0 +1,22 @@
+---
+import data from '../../content/data.json';
+import MemoArticle from '../../components/MemoArticle.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const article = data.memo.posts.find((post) => post.slug === 'the-fractional-motor');
+
+if (!article) {
+  throw new Error('Memo article not found: the-fractional-motor');
+}
+
+const articleSite = { ...data.site, title: `${article.title} | ${data.profile.name}`, description: article.summary };
+---
+
+<BaseLayout site={articleSite}>
+  <a class="fixed left-4 top-4 z-50 -translate-y-20 bg-ink px-4 py-2 font-mono text-xs text-paper focus:translate-y-0" href="#content">{data.site.skipLabel}</a>
+  <SiteHeader name={data.profile.name} handle={data.profile.handle} navigation={data.site.navigation} navigationLabel={data.site.navigationLabel} />
+  <MemoArticle article={article} />
+  <SiteFooter name={data.profile.name} copyright={data.site.copyright} builtWith={data.site.builtWith} footerLabel={data.site.footerLabel} />
+</BaseLayout>

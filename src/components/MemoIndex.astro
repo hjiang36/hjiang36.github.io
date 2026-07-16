@@ -1,0 +1,66 @@
+---
+interface MemoEntry {
+  title: string;
+  date: string;
+  datetime: string;
+  summary: string;
+  href: string;
+}
+
+interface Props {
+  memo: {
+    eyebrow: string;
+    title: string;
+    description: string;
+    caveat: string;
+    backLabel: string;
+    emptyLabel: string;
+    topicLabel: string;
+    topic: string;
+    posts: MemoEntry[];
+  };
+}
+
+const { memo } = Astro.props;
+---
+
+<main class="min-h-[calc(100vh-8rem)] border-b border-ink/20" id="content">
+  <div class="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-24 lg:px-12">
+    <div class="grid gap-12 md:grid-cols-12">
+      <div class="md:col-span-3">
+        <p class="font-mono text-xs uppercase text-signal">{memo.eyebrow}</p>
+      </div>
+      <div class="md:col-span-8">
+        <h1 class="break-words text-5xl font-semibold tracking-normal sm:text-7xl">{memo.title}</h1>
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-muted">{memo.description}</p>
+        <p class="mt-5 max-w-2xl border-l border-ink/20 pl-4 font-mono text-xs leading-relaxed text-muted">{memo.caveat}</p>
+
+        {memo.posts.length > 0 ? (
+          <ol class="mt-16 border-t border-ink/20">
+            {memo.posts.map((post) => (
+              <li class="border-b border-ink/20 py-7">
+                <a class="group grid gap-3 sm:grid-cols-[8rem_1fr]" href={post.href}>
+                  <time class="font-mono text-xs text-muted" datetime={post.datetime}>{post.date}</time>
+                  <span>
+                    <span class="block break-words text-2xl font-semibold group-hover:text-signal">{post.title}</span>
+                    <span class="mt-2 block leading-relaxed text-muted">{post.summary}</span>
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ol>
+        ) : (
+          <div class="mt-16 border-y border-ink/20 py-7">
+            <p class="font-mono text-xs uppercase text-muted">{memo.emptyLabel}</p>
+            <div class="mt-5 grid gap-2 sm:grid-cols-[8rem_1fr]">
+              <p class="font-mono text-xs text-signal">{memo.topicLabel}</p>
+              <p class="text-xl">{memo.topic}</p>
+            </div>
+          </div>
+        )}
+
+        <a class="mt-12 inline-block border-b border-ink font-mono text-xs uppercase hover:border-signal hover:text-signal" href="/">{memo.backLabel}</a>
+      </div>
+    </div>
+  </div>
+</main>

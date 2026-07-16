@@ -1,7 +1,7 @@
 {
   "site": {
-    "title": "Haomiao Jiang | Computer Vision Engineer",
-    "description": "The personal portfolio of Haomiao Jiang, working across computer vision, 3D systems, and generative AI.",
+    "title": "Haomiao Jiang | Principal Engineer / Senior Engineering Manager",
+    "description": "The personal portfolio of Haomiao Jiang, working across computer vision, 3D systems, generative AI, and XR.",
     "language": "en",
     "skipLabel": "Skip to content",
     "navigationLabel": "Primary navigation",
@@ -9,20 +9,21 @@
     "copyright": "Haomiao Jiang",
     "builtWith": "Static by design. Built with Astro.",
     "navigation": [
-      { "label": "Research", "href": "#research" },
-      { "label": "About", "href": "#about" }
+      { "label": "Research", "href": "/#research", "quiet": false },
+      { "label": "About", "href": "/#about", "quiet": false },
+      { "label": "Memo", "href": "/memo/", "quiet": true }
     ]
   },
   "profile": {
     "name": "Haomiao Jiang",
     "handle": "hjiang36",
-    "role": "Computer Vision Engineer",
+    "role": "Principal Engineer / Senior Engineering Manager",
     "location": "California, USA",
     "affiliation": "Roblox",
     "avatar": "https://avatars.githubusercontent.com/u/3926437?v=4",
     "avatarAlt": "Portrait of Haomiao Jiang",
     "availability": "Building at the intersection of pixels, geometry, and intelligent systems.",
-    "intro": "I work across computer vision, 3D systems, and generative AI, with roots in visual perception research and a bias toward useful tools.",
+    "intro": "I work across computer vision, 3D systems, generative AI and XR, with roots in visual perception & graphics and a bias toward useful tools.",
     "links": [
       { "label": "GitHub", "href": "https://github.com/hjiang36" },
       { "label": "Google Scholar", "href": "https://scholar.google.com/citations?user=RB6RIxkAAAAJ&hl=en" },
@@ -30,7 +31,7 @@
     ]
   },
   "hero": {
-    "eyebrow": "CV / 3D / GEN-AI",
+    "eyebrow": "CV / 3D / GEN-AI / XR",
     "prompt": "~/haomiao",
     "command": "whoami",
     "scrollHint": "Scroll to inspect research interests"
@@ -59,7 +60,121 @@
       { "label": "Working at", "value": "Roblox" },
       { "label": "Academic link", "value": "Stanford" }
     ],
-    "contactPrompt": "Find me elsewhere",
-    "sourceNote": "Profile details are sourced from public GitHub and Google Scholar profiles."
+    "contactPrompt": "Find me elsewhere"
+  },
+  "memo": {
+    "eyebrow": "Occasional writing",
+    "title": "Memo",
+    "description": "A quiet corner for unfinished thoughts on technology, engineering, and what may come next.",
+    "caveat": "These memos capture personal views at a particular moment. They are working ideas, not predictions or positions held by any organization.",
+    "backLabel": "Back to portfolio",
+    "emptyLabel": "First memo in progress",
+    "topicLabel": "On the desk",
+    "topic": "Thoughts on the future of AI agents",
+    "posts": [
+      {
+        "slug": "the-fractional-motor",
+        "href": "/memo/the-fractional-motor/",
+        "label": "Memo 001",
+        "title": "The Fractional Motor: How to Thrive in AI's Production Revolution",
+        "date": "July 14, 2026",
+        "datetime": "2026-07-14",
+        "readTime": "8 min read",
+        "summary": "AI is not primarily reducing the cost of moving information. It is reducing the cost of producing cognitive work, and that changes where advantage will accumulate.",
+        "tags": ["AI", "Strategy", "Future of Work", "Systems Architecture"],
+        "backLabel": "All memos",
+        "sections": [
+          {
+            "title": "A production revolution",
+            "paragraphs": [
+              "The default analogy for artificial intelligence is the Internet. It is also a misleading one. The Internet transformed how information is distributed: it made publishing, discovery, and communication radically cheaper. AI transforms how work is produced. It lowers the cost of reasoning over information and turning intent into code, designs, analysis, and decisions.",
+              "That makes the electrical revolution a more useful historical guide than the dot-com boom. Electricity did not merely improve an existing machine. It changed where power could be placed, how factories could be arranged, and eventually which organizations could compete. AI is beginning to do the same for cognitive production."
+            ],
+            "points": []
+          },
+          {
+            "title": "The line-shaft organization",
+            "paragraphs": [
+              "When factories first adopted electricity, many replaced a central steam engine with one large electric motor and left everything else intact. Belts and pulleys still carried power from a central shaft to each machine. The energy source had changed, but the architecture remained constrained by steam. Unsurprisingly, the early productivity gains were modest.",
+              "Many companies are repeating that pattern with AI. They are connecting a powerful new cognitive engine to an organization designed around human constraints: limited working memory, slow communication, fragmented context, and expensive coordination.",
+              "Departments and management layers partly exist to cope with those limits. Product, design, engineering, legal, and operations each hold a fragment of organizational state. Meetings, documents, managers, and ticket queues move that state between them. In effect, people serve as APIs between silos.",
+              "AI does not eliminate context limits or coordination costs, but it changes their scale. Agents can read across repositories, specifications, telemetry, and policy at machine speed. Forcing them into tiny, isolated tasks inside the same old chart captures only a fraction of that capability."
+            ],
+            "points": []
+          },
+          {
+            "title": "From central engine to fractional motors",
+            "paragraphs": [
+              "The larger gains from electrification arrived when factories moved toward unit drive: smaller motors placed directly at individual machines. Power no longer had to radiate from one central shaft. Equipment could be arranged around the flow of production rather than the geometry of belts and pulleys. Once the architecture adapted to the power source, new production systems became possible.",
+              "The AI equivalent is not one company-wide chatbot. It is fluid, distributed cognition: agents embedded in tools and connected into workflows that can carry a goal from definition through implementation and verification. In this model, decomposition is not a clerical prelude to the work. It is part of the work the system performs.",
+              "The near-term opportunity belongs to people who can design these systems. But history offers a warning: orchestration patterns will standardize. Today's scarce agent architect may become tomorrow's platform feature. Building swarms is valuable now; owning a durable bottleneck is more valuable over time."
+            ],
+            "points": []
+          },
+          {
+            "title": "What gets compressed",
+            "paragraphs": [
+              "Roles built primarily around transferring state are exposed. This does not mean every project manager or coordinator disappears. It means coordination alone becomes a weaker source of leverage when systems can maintain shared context, surface conflicts, and update plans continuously.",
+              "The same is true of ticket-driven execution. Breaking a goal into small, context-poor units made sense when work had to be distributed across many people. An agentic system can often plan and execute within one continuous context. Organizations that preserve decomposition as ritual will spend their new capability servicing an old process."
+            ],
+            "points": []
+          },
+          {
+            "title": "Where value accumulates",
+            "paragraphs": [
+              "As generation becomes abundant, value moves to the constraints around it. Three layers look especially durable.",
+              "These layers share one property: they remain scarce even when cognitive output is cheap. They determine what an AI system can touch, whether its work can be trusted, and where its intelligence can have real-world effect."
+            ],
+            "points": [
+              {
+                "title": "Tools and environments",
+                "body": "An agent is only as capable as the environment it can safely operate. The new tool-and-die makers build APIs, data pipelines, sandboxes, observability, and automated test rigs. They do not merely use AI to perform tasks; they create the interfaces through which AI can act."
+              },
+              {
+                "title": "Validation and loss functions",
+                "body": "When producing code, contracts, or designs is cheap, evaluation becomes the differentiator. High-leverage people define acceptance criteria, tests, proofs, security boundaries, and taste. The machine searches the solution space; the human decides what success means."
+              },
+              {
+                "title": "The physical bridge",
+                "body": "Electricity creates value through appliances. AI needs its own bridges into the world: hardware, robotics, operating-system integration, and proprietary physical telemetry. Models may become widely available, but trustworthy access to real environments and unique data remains difficult to copy."
+              }
+            ]
+          },
+          {
+            "title": "The allocator's advantage",
+            "paragraphs": [
+              "Electrification decentralized mechanical power. AI may decentralize organizational capability. A small team with strong tools and rigorous evaluation could produce what once required a much larger hierarchy. The exact ratio is unknowable, but the direction is already visible: flatter teams, broader individual scope, and less distance between intent and execution.",
+              "In that environment, the highest-value skill is not raw technical output. It is allocation: choosing a consequential problem, supplying the right context and tools, defining a trustworthy verification loop, and accepting responsibility for the result.",
+              "The goal is no longer to compete with the machine at producing every artifact. It is to build the socket, calibrate the instruments, and decide where the power should flow."
+            ],
+            "points": []
+          },
+          {
+            "title": "How to thrive now",
+            "paragraphs": [
+              "The transition will be uneven, which makes the present unusually valuable. Four practices can compound while the architecture is still being invented."
+            ],
+            "points": [
+              {
+                "title": "Own outcomes, not tasks",
+                "body": "Move closer to problem selection, tradeoffs, and accountability. Execution will get cheaper; judgment about what deserves execution will not."
+              },
+              {
+                "title": "Build the verification loop",
+                "body": "Treat tests, telemetry, evaluation, and security as core product infrastructure. Reliable feedback is what turns inexpensive generation into dependable production."
+              },
+              {
+                "title": "Create agent-native interfaces",
+                "body": "Make systems legible and operable through documented APIs, structured context, reproducible environments, and explicit constraints. Better interfaces increase the capability of every model connected to them."
+              },
+              {
+                "title": "Stay close to scarce reality",
+                "body": "Develop expertise in proprietary data, customer trust, physical systems, regulation, or domain-specific taste. Durable advantage will live where abstraction meets a constraint that cannot be generated on demand."
+              }
+            ]
+          }
+        ]
+      }
+    ]
   }
 }
